@@ -81,9 +81,14 @@ export default function Card({ data }) {
               <Rating
                 name="read-only"
                 value={data.rating.substring(0, data.rating.indexOf(";"))}
+                sx={{
+                  "& .MuiRating-iconFilled": {
+                    color: "darkOrange",
+                  },
+                }}
                 readOnly
               />
-              <span className="text-sm font-normal pt-1">
+              <span className={`text-sm font-bold pt-1 ${darkText}`}>
                 ({data.rating.substring(data.rating.length - 3)} reviews)
               </span>
             </div>
@@ -129,21 +134,21 @@ export default function Card({ data }) {
         >
           <span className="gap-2 flex items-center">
             <FontAwesomeIcon
-              className="text-lg -mt-0.5 text-[#F9B215]"
+              className="text-lg -mt-0.5 text-orange-600"
               icon={faCircleHalfStroke}
             />
             8 Activities
           </span>
           <span className="gap-2 flex items-center">
             <FontAwesomeIcon
-              className="text-lg -mt-0.5 text-[#F9B215]"
+              className="text-lg -mt-0.5 text-orange-600"
               icon={faVolleyball}
             />
             {data.games_count} Games
           </span>
           <span className="gap-2 flex items-center">
             <FontAwesomeIcon
-              className="text-lg -mt-0.5 text-[#F9B215]"
+              className="text-lg -mt-0.5 text-orange-600"
               icon={faAward}
             />
             {data.certificate_count} Certificate

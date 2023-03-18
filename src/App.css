@@ -1,6 +1,9 @@
 .App {
   font-family: "Lato", sans-serif;
 }
+.MuiRating-iconFilled {
+  color: "#ff6d75" !important;
+}
 
 .Popping {
   font-family: "Poppins", sans-serif !important;
@@ -21,7 +24,7 @@
 .arrow-down {
   content: "";
   position: absolute;
-  bottom: -10px;
+  bottom: -9px;
   left: 50%;
   transform: translateX(-50%);
   border-color: #003f5c transparent transparent;
